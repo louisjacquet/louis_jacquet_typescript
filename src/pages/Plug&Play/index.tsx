@@ -12,20 +12,15 @@ import {
   ImageBackground,
 } from "react-native";
 import { styles } from "./style";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import logo from "../../../assets/BNP_Paribas_Cardif.png";
-import guillemets from "../../../assets/Text_to_image.png";
-import img_back from "../../../assets/image_back_bnp.png";
-import img_back2 from "../../../assets/img_back_2.png";
-import img_back3 from "../../../assets/img_back_3.png";
-import img_grey from "../../../assets/F7F7F7.png";
-import img_services from "../../../assets/Services.png";
-import img_decouvrir from "../../../assets/Decouvrir.png";
-import line_green from "../../../assets/green_color.png";
-import blanc from "../../../assets/blanc.png";
+import plug from "../../../assets/Plug.png";
+
 import { Video, AVPlaybackStatus } from "expo-av";
 
-export default function App() {
+export default function App({ navigation }: { navigation: any }) {
+  const Stack = createNativeStackNavigator();
   const video = React.useRef(null);
   const video2 = React.useRef(null);
   const [status, setStatus] = React.useState({});
@@ -109,10 +104,38 @@ export default function App() {
           </View>
           <View style={{ flex: 1.5, backgroundColor: "white" }}>
             <TouchableOpacity style={styles.button2}>
-              <Text style={styles.text3}>PLUG & PlAY</Text>
+              <Text
+                style={styles.text3}
+                onPress={() => navigation.navigate("Plug")}
+              >
+                PLUG & PlAY
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
+        <View
+          style={[
+            styles.container,
+            {
+              flexDirection: "row",
+              justifyContent: "center",
+              flex: 11,
+              backgroundColor: "yellow",
+            },
+          ]}
+        >
+          <View style={{ flex: 8, backgroundColor: "blue" }}>
+            <Image
+              source={plug}
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </View>
+          <View style={{ flex: 10, backgroundColor: "violet" }}></View>
+        </View>
+        <View style={{ flex: 10, backgroundColor: "red" }}></View>
       </ScrollView>
     </View>
   );

@@ -24,13 +24,13 @@ import img_decouvrir from "../assets/Decouvrir.png";
 import line_green from "../assets/green_color.png";
 import blanc from "../assets/blanc.png";
 import { Video, AVPlaybackStatus } from "expo-av";
-import Constants from "expo-constants";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as Linking from "expo-linking";
 
-export default function App() {
-  const handleOpenWithLinking = () => {
-    Linking.openURL("https://expo.dev");
-  };
+export default function App({ navigation }: { navigation: any }) {
+  const Stack = createNativeStackNavigator();
+
   const video = React.useRef(null);
   const video2 = React.useRef(null);
   const [status, setStatus] = React.useState({});
@@ -115,9 +115,14 @@ export default function App() {
           <View style={{ flex: 1.5, backgroundColor: "white" }}>
             <TouchableOpacity
               style={styles.button2}
-              onPress={() => handleOpenWithLinking()}
+              //onPress={() => handleOpenWithLinking()}
             >
-              <Text style={styles.text3}>PLUG & PlAY</Text>
+              <Text
+                style={styles.text3}
+                onPress={() => navigation.navigate("Plug")}
+              >
+                PLUG & PlAY
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -507,4 +512,6 @@ export default function App() {
 _handleOpenWithLinking = () => {
   Linking.openURL("https://expo.dev");
 };
+
+onPress={() => handleOpenWithLinking()
 */
