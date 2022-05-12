@@ -1,0 +1,123 @@
+import React from "react";
+import {
+  Image,
+  StyleSheet,
+  Button,
+  View,
+  SafeAreaView,
+  Text,
+  Alert,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import { styles } from "./style";
+
+import logo from "../assets/BNP_Paribas_Cardif.png";
+import guillemets from "../assets/Text_to_image.png";
+import img_back from "../assets/image_back_bnp.png";
+import img_back2 from "../assets/img_back_2.png";
+import img_back3 from "../assets/img_back_3.png";
+import img_grey from "../assets/F7F7F7.png";
+import line_green from "../assets/green_color.png";
+import blanc from "../assets/blanc.png";
+import { Video, AVPlaybackStatus } from "expo-av";
+
+export default function App() {
+  const video = React.useRef(null);
+  const video2 = React.useRef(null);
+  const [status, setStatus] = React.useState({});
+  return (
+    <View
+      style={[
+        styles.container,
+        {
+          flexDirection: "column",
+          justifyContent: "center",
+          backgroundColor: "yellow",
+          flex: 1,
+        },
+      ]}
+    >
+      <View style={{ backgroundColor: "black", flexDirection: "row" }}>
+        <View style={{ flex: 2, backgroundColor: "violet" }}>
+          <Image source={logo} style={{ width: 190, height: 40 }} />
+        </View>
+        <View
+          style={{
+            flex: 0.2,
+            justifyContent: "center",
+            backgroundColor: "red",
+          }}
+        >
+          <Text style={styles.text1}>|</Text>
+        </View>
+        <View
+          style={{
+            flex: 6.3,
+            backgroundColor: "violet",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={styles.text2}>Welcome to UXTeams Services</Text>
+        </View>
+        <View
+          style={{
+            flex: 0.9,
+            justifyContent: "center",
+            backgroundColor: "yellow",
+          }}
+        >
+          <Text style={styles.text2}>UXTeam</Text>
+        </View>
+        <View
+          style={{
+            flex: 0.2,
+            justifyContent: "center",
+            backgroundColor: "red",
+          }}
+        >
+          <Text style={styles.text1}>|</Text>
+        </View>
+        <View
+          style={{
+            flex: 0.7,
+            justifyContent: "center",
+            backgroundColor: "yellow",
+          }}
+        >
+          <Text style={styles.text2}>Projets</Text>
+        </View>
+        <View
+          style={{
+            flex: 0.2,
+            justifyContent: "center",
+            backgroundColor: "red",
+          }}
+        >
+          <Text style={styles.text1}>|</Text>
+        </View>
+        <View
+          style={{
+            flex: 0.7,
+            justifyContent: "center",
+            backgroundColor: "yellow",
+          }}
+        >
+          <Text style={styles.text2}>Glossaire</Text>
+        </View>
+        <View style={{ flex: 0.2, backgroundColor: "pink" }}></View>
+        <View style={{ flex: 1.5, backgroundColor: "blue" }}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text3}>A LA CARTE</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{ flex: 1.5, backgroundColor: "pink" }}>
+          <TouchableOpacity style={styles.button2}>
+            <Text style={styles.text3}>PLUG & PlAY</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={{ flex: 7, backgroundColor: "green" }}></View>
+    </View>
+  );
+}

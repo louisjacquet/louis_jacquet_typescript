@@ -1,0 +1,168 @@
+import { StyleSheet } from "react-native";
+export const styles = StyleSheet.create({
+  backgroundContainer: {
+    top: 0,
+    bottom: 0,
+    left: 10,
+    right: 0,
+  },
+  container: {
+    justifyContent: "center",
+    marginTop: 12,
+  },
+  theImage: {
+    width: "100%",
+    height: 500,
+    resizeMode: "cover",
+  },
+  video: {
+    alignSelf: "center",
+    width: 430,
+    height: 250,
+  },
+  video2: {
+    alignSelf: "center",
+    width: 400,
+    height: 230,
+    justifyContent: "center",
+  },
+
+  button: {
+    backgroundColor: "#61C3D7",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    height: 45,
+    padding: 15,
+    width: 120,
+  },
+  button2: {
+    backgroundColor: "#26AA90",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    height: 45,
+    padding: 15,
+    width: 120,
+  },
+  button3: {
+    backgroundColor: "#26AA90",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    height: 40,
+    padding: 15,
+    width: 150,
+  },
+  button4: {
+    backgroundColor: "#26AA90",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    height: 45,
+    padding: 15,
+    width: 140,
+  },
+  button11: {
+    backgroundColor: "#26AA90",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    height: 45,
+    padding: 15,
+    width: 165,
+  },
+
+  text1: {
+    fontSize: 24,
+    color: "#E4E4E4",
+    fontWeight: 300, //Semibold
+    left: 190,
+  },
+  text1b: {
+    fontSize: 24,
+    marginLeft: 5,
+    fontWeight: 300, //Semibold
+    left: 190,
+  },
+  text2: {
+    fontSize: 14,
+    fontWeight: 600, //Semibold
+    top: 5,
+    left: 210,
+  },
+  italique: {
+    color: "#424242",
+    top: 275,
+    left: 100,
+    fontSize: 15,
+    fontStyle: "italic",
+    fontWeight: 400,
+  },
+  texte101: {
+    color: "#424242",
+    top: 100,
+    left: 80,
+    fontSize: 25,
+    fontWeight: 600,
+  },
+  texte102: {
+    color: "#424242",
+    top: 150,
+    left: 80,
+    fontSize: 15,
+    fontWeight: 400,
+  },
+  texte201: {
+    color: "#424242",
+    top: 900,
+    right: 380,
+    fontSize: 25,
+    fontWeight: 600,
+  },
+  texte202: {
+    color: "#424242",
+    top: 950,
+    right: 80,
+    fontSize: 15,
+    fontWeight: 400,
+  },
+
+  texte401: {
+    color: "#424242",
+    top: 1500,
+    right: 310,
+    fontSize: 25,
+    fontWeight: 600,
+  },
+  texte402: {
+    color: "#424242",
+    top: 1550,
+    right: 170,
+    fontSize: 15,
+    fontWeight: 400,
+  },
+  texte403: {
+    color: "#26AA90",
+    top: 1580,
+    right: 360,
+    fontSize: 15,
+    fontWeight: 600,
+  },
+  text3: {
+    fontSize: 17,
+    textAlign: "center",
+    fontWeight: 400,
+    color: "#FFFFFF",
+    width: 100,
+  },
+  text4: {
+    fontSize: 17,
+    textAlign: "center",
+    fontWeight: 400,
+    color: "#FFFFFF",
+    top: 5,
+    width: 150,
+    left: 210,
+  },
+});
