@@ -48,7 +48,9 @@ export default function App({ navigation }: { navigation: any }) {
       <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
         <View style={{ backgroundColor: "white", flexDirection: "row" }}>
           <View style={{ flex: 2, backgroundColor: "white" }}>
-            <Image source={logo} style={{ width: 190, height: 40 }} />
+            <TouchableOpacity onPress={() => navigation.navigate("Index")}>
+              <Image source={logo} style={{ width: 190, height: 40 }} />
+            </TouchableOpacity>
           </View>
           <View
             style={{
@@ -181,7 +183,7 @@ export default function App({ navigation }: { navigation: any }) {
                     uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
                   }}
                   useNativeControls
-                  resizeMode="contain"
+                  //resizeMode="contain"
                   isLooping
                   onPlaybackStatusUpdate={(status) => setStatus(() => status)}
                 />
@@ -203,7 +205,7 @@ export default function App({ navigation }: { navigation: any }) {
             <View
               style={{
                 flex: 2,
-                flexDirection: "col",
+                flexDirection: "column",
               }}
             >
               <ImageBackground style={styles.theImage} source={img_services}>
@@ -211,7 +213,7 @@ export default function App({ navigation }: { navigation: any }) {
                   style={{
                     flex: 1,
                     backgroundColor: "transparent",
-                    flexDirection: "col",
+                    flexDirection: "column",
                   }}
                 >
                   <View
@@ -250,7 +252,7 @@ export default function App({ navigation }: { navigation: any }) {
                   style={{
                     flex: 1,
                     backgroundColor: "transparent",
-                    flexDirection: "col",
+                    flexDirection: "column",
                   }}
                 >
                   <View
@@ -327,7 +329,7 @@ export default function App({ navigation }: { navigation: any }) {
                 uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
               }}
               useNativeControls
-              resizeMode="contain"
+              //resizeMode="contain"
               isLooping
               onPlaybackStatusUpdate={(status) => setStatus(() => status)}
             />
@@ -336,7 +338,7 @@ export default function App({ navigation }: { navigation: any }) {
             style={{
               flex: 0.75,
               backgroundColor: "transparent",
-              flexDirection: "col",
+              flexDirection: "column",
             }}
           >
             <Text style={[styles.texte201, { lineHeight: 70 }]}>
@@ -372,14 +374,14 @@ export default function App({ navigation }: { navigation: any }) {
           <View
             style={{
               flex: 0.1,
-              flexDirection: "col",
+              flexDirection: "column",
             }}
           ></View>
           <View
             style={{
               flex: 0.75,
               backgroundColor: "transparent",
-              flexDirection: "col",
+              flexDirection: "column",
             }}
           >
             <Text style={[styles.texte201, { lineHeight: 70 }]}>
@@ -446,7 +448,7 @@ export default function App({ navigation }: { navigation: any }) {
             style={{
               flex: 0.75,
               backgroundColor: "transparent",
-              flexDirection: "col",
+              flexDirection: "column",
             }}
           >
             <Text style={[styles.texte401, , { lineHeight: 50 }]}> </Text>
@@ -462,7 +464,7 @@ export default function App({ navigation }: { navigation: any }) {
         <View
           style={{
             flex: 0.1,
-            flexDirection: "col",
+            flexDirection: "column",
           }}
         >
           <Image
@@ -485,7 +487,7 @@ export default function App({ navigation }: { navigation: any }) {
           <Text
             style={{
               fontSize: 20,
-              fontWeight: 200,
+              fontWeight: "200",
               marginRight: 20,
             }}
           >
@@ -494,7 +496,7 @@ export default function App({ navigation }: { navigation: any }) {
           <Text
             style={{
               fontSize: 14,
-              fontWeight: 500,
+              fontWeight: "500",
 
               textAlign: "center",
             }}

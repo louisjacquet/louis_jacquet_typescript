@@ -85,24 +85,24 @@ export const styles = StyleSheet.create({
   text1: {
     fontSize: 24,
     color: "#E4E4E4",
-    fontWeight: 300, //Semibold
+    fontWeight: "300", //Semibold
     left: 190,
   },
   text1b: {
     fontSize: 24,
     marginLeft: 5,
-    fontWeight: 300, //Semibold
+    fontWeight: "300", //Semibold
     left: 190,
   },
   text2: {
     fontSize: 14,
-    fontWeight: 600, //Semibold
+    fontWeight: "600", //Semibold
     top: 5,
     left: 210,
   },
   textdiv: {
     fontSize: 12,
-    fontWeight: 800, //Semibold
+    fontWeight: "800", //Semibold
   },
   italique: {
     color: "#424242",
@@ -110,35 +110,35 @@ export const styles = StyleSheet.create({
     left: 100,
     fontSize: 15,
     fontStyle: "italic",
-    fontWeight: 400,
+    fontWeight: "400",
   },
   texte101: {
     color: "#424242",
     top: 100,
     left: 80,
     fontSize: 25,
-    fontWeight: 600,
+    fontWeight: "600",
   },
   texte102: {
     color: "#424242",
     top: 150,
     left: 80,
     fontSize: 15,
-    fontWeight: 400,
+    fontWeight: "400",
   },
   textfin: {
     fontSize: 20,
-    fontWeight: 600,
+    fontWeight: "600",
     textAlign: "center",
   },
   textfin2: {
     fontSize: 14,
-    fontWeight: 700,
+    fontWeight: "700",
     textAlign: "center",
   },
   textfin3: {
     fontSize: 12,
-    fontWeight: 400,
+    fontWeight: "400",
     textAlign: "center",
   },
   texte201: {
@@ -146,14 +146,14 @@ export const styles = StyleSheet.create({
     top: 900,
     right: 380,
     fontSize: 25,
-    fontWeight: 600,
+    fontWeight: "600",
   },
   texte202: {
     color: "#424242",
     top: 950,
     right: 80,
     fontSize: 15,
-    fontWeight: 400,
+    fontWeight: "400",
   },
 
   texte401: {
@@ -161,26 +161,26 @@ export const styles = StyleSheet.create({
     top: 1500,
     right: 310,
     fontSize: 25,
-    fontWeight: 600,
+    fontWeight: "600",
   },
   texte402: {
     color: "#424242",
     top: 1550,
     right: 170,
     fontSize: 15,
-    fontWeight: 400,
+    fontWeight: "400",
   },
   texte403: {
     color: "#26AA90",
     top: 1580,
     right: 360,
     fontSize: 15,
-    fontWeight: 600,
+    fontWeight: "600",
   },
   text3: {
     fontSize: 17,
     textAlign: "center",
-    fontWeight: 400,
+    fontWeight: "400",
     color: "#FFFFFF",
     width: 100,
   },

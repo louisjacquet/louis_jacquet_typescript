@@ -13,9 +13,7 @@ import {
 } from "react-native";
 import { styles } from "./style";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Elevations from "react-native-elevation";
 import blanc from "../../../assets/blanc.png";
-import img_back2 from "../../../assets/img_back_2.png";
 import img_back3 from "../../../assets/img_back_3.png";
 import line_green from "../../../assets/green_color.png";
 import logo from "../../../assets/BNP_Paribas_Cardif.png";
@@ -53,7 +51,9 @@ export default function App({ navigation }: { navigation: any }) {
       <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
         <View style={{ backgroundColor: "white", flexDirection: "row" }}>
           <View style={{ flex: 2, backgroundColor: "white" }}>
-            <Image source={logo} style={{ width: 190, height: 40 }} />
+            <TouchableOpacity onPress={() => navigation.navigate("Index")}>
+              <Image source={logo} style={{ width: 190, height: 40 }} />
+            </TouchableOpacity>
           </View>
           <View
             style={{
@@ -358,7 +358,7 @@ export default function App({ navigation }: { navigation: any }) {
                   }}
                 ></View>
                 <TouchableOpacity
-                  onPress={buttonClickedHandler}
+                  onPress={() => navigation.navigate("Tool")}
                   style={styles.roundButton2}
                 >
                   <Text
@@ -699,7 +699,7 @@ export default function App({ navigation }: { navigation: any }) {
                 style={{
                   flex: 10,
                   backgroundColor: "#F8F8F8",
-                  justifyContent: "end",
+                  justifyContent: "flex-end",
                 }}
               >
                 <Text style={styles.textfin}>
@@ -741,14 +741,14 @@ export default function App({ navigation }: { navigation: any }) {
           <View
             style={{
               flex: 0.1,
-              flexDirection: "col",
+              flexDirection: "column",
             }}
           ></View>
           <View
             style={{
               flex: 0.75,
               backgroundColor: "transparent",
-              flexDirection: "col",
+              flexDirection: "column",
             }}
           >
             <Text style={[styles.texte201, { lineHeight: 70 }]}>
@@ -817,7 +817,7 @@ export default function App({ navigation }: { navigation: any }) {
             style={{
               flex: 0.75,
               backgroundColor: "transparent",
-              flexDirection: "col",
+              flexDirection: "column",
             }}
           >
             <Text style={[styles.texte401, , { lineHeight: 50 }]}> </Text>
@@ -833,7 +833,7 @@ export default function App({ navigation }: { navigation: any }) {
         <View
           style={{
             flex: 0.1,
-            flexDirection: "col",
+            flexDirection: "column",
           }}
         >
           <Image
@@ -858,7 +858,7 @@ export default function App({ navigation }: { navigation: any }) {
           <Text
             style={{
               fontSize: 20,
-              fontWeight: 200,
+              fontWeight: "200",
               marginRight: 20,
             }}
           >
@@ -867,7 +867,7 @@ export default function App({ navigation }: { navigation: any }) {
           <Text
             style={{
               fontSize: 14,
-              fontWeight: 500,
+              fontWeight: "500",
               marginTop: 5,
               textAlign: "center",
             }}

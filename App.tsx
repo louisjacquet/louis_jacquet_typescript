@@ -1,5 +1,6 @@
 import Index from "./src";
 import Plug from "./src/pages/Plug&Play";
+import Tool from "./src/pages/Toolbox";
 import {
   createAppContainer,
   createStackNavigator,
@@ -18,8 +19,9 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Main" component={Index} />
+        <Stack.Screen name="Index" component={Index} />
         <Stack.Screen name="Plug" component={Plug} />
+        <Stack.Screen name="Tool" component={Tool} />
       </Stack.Navigator>
     </NavigationContainer>
   );
