@@ -135,11 +135,11 @@ export default function App({ navigation }: { navigation: any }) {
               flexDirection: "row",
               justifyContent: "center",
               flex: 9,
-              backgroundColor: "yellow",
+              backgroundColor: "white",
             },
           ]}
         >
-          <View style={{ flex: 8, backgroundColor: "blue" }}>
+          <View style={{ flex: 8, backgroundColor: "white" }}>
             <Image
               source={plug}
               style={{
@@ -148,8 +148,8 @@ export default function App({ navigation }: { navigation: any }) {
               }}
             />
           </View>
-          <View style={{ flex: 1.1, backgroundColor: "orange" }}></View>
-          <View style={{ flex: 8.9, backgroundColor: "violet" }}>
+          <View style={{ flex: 1.1, backgroundColor: "white" }}></View>
+          <View style={{ flex: 8.9, backgroundColor: "white" }}>
             <Text style={[styles.texte201, { lineHeight: 70, paddingTop: 10 }]}>
               PLUG & PLAY
             </Text>
@@ -174,10 +174,10 @@ export default function App({ navigation }: { navigation: any }) {
         </View>
         <View style={{ flex: 1.8, backgroundColor: "white" }}></View>
         <View
-          style={{ flex: 12.1, backgroundColor: "red", flexDirection: "row" }}
+          style={{ flex: 12.1, backgroundColor: "white", flexDirection: "row" }}
         >
           <View
-            style={{ flex: 1, backgroundColor: "pink", height: 400 }}
+            style={{ flex: 1, backgroundColor: "white", height: 400 }}
           ></View>
           {/*
           
@@ -191,7 +191,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 0.925,
-                  backgroundColor: "magenta",
+                  backgroundColor: "white",
                 }}
               >
                 <Image
@@ -203,24 +203,25 @@ export default function App({ navigation }: { navigation: any }) {
                     marginTop: 25,
                   }}
                 />
-                <Text>
+                <Text style={{ marginLeft: 15, marginRight: 15 }}>
                   {"\n"}
-                  Pour récupérer les différents zones d'un site charté BNP{"\n"}
-                  Paribas AM : header, body, footer, etc.. Tout est prêt
+                  Pour récupérer les différents zones d'un site {"\n"}
+                  charté BNP Paribas AM : header, body, footer,
                   {"\n"}
-                  avec des dossiers reliés. Il n'y a qu'à tout copier !{"\n"}
+                  etc.. Tout est prêt avec des dossiers reliés.{"\n"}
+                  Il n'y a qu'à tout copier !
                 </Text>
                 <View
                   style={{
                     flex: 1,
-                    backgroundColor: "orange",
+                    backgroundColor: "white",
                     flexDirection: "row",
                   }}
                 >
                   <View
                     style={{
                       flex: 1,
-                      backgroundColor: "pink",
+                      backgroundColor: "white",
                     }}
                   >
                     <Image
@@ -236,7 +237,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 2,
-                      backgroundColor: "red",
+                      backgroundColor: "white",
                       marginTop: "auto",
                     }}
                   >
@@ -252,7 +253,7 @@ export default function App({ navigation }: { navigation: any }) {
                 <View
                   style={{
                     flex: 0.975,
-                    backgroundColor: "blue",
+                    backgroundColor: "white",
                   }}
                 ></View>
                 <TouchableOpacity
@@ -285,12 +286,12 @@ export default function App({ navigation }: { navigation: any }) {
           
           */}
           <View style={{ flex: 0.5, backgroundColor: "white" }}></View>
-          <View style={{ flex: 9.5, backgroundColor: "violet" }}>
+          <View style={{ flex: 9.5, backgroundColor: "white" }}>
             <View style={styles.CardRactangle}>
               <View
                 style={{
                   flex: 0.925,
-                  backgroundColor: "magenta",
+                  backgroundColor: "white",
                 }}
               >
                 <Image
@@ -302,24 +303,24 @@ export default function App({ navigation }: { navigation: any }) {
                     marginTop: 25,
                   }}
                 />
-                <Text>
+                <Text style={{ marginLeft: 15, marginRight: 15 }}>
                   {"\n"}
                   Une toolbox pour récupérer par copier/coller des{"\n"}
-                  modules graphiques et Les intégrer directement dans{"\n"}
-                  votre solution. Chaque élément est visible en preview,{"\n"}
-                  code html, css, javascript.{"\n"}
+                  modules graphiques et Les intégrer directement{"\n"}
+                  dans votre solution. Chaque élément est visible {"\n"}
+                  en preview, code html, css, javascript.{"\n"}
                 </Text>
                 <View
                   style={{
                     flex: 1,
-                    backgroundColor: "orange",
+                    backgroundColor: "white",
                     flexDirection: "row",
                   }}
                 >
                   <View
                     style={{
                       flex: 1,
-                      backgroundColor: "pink",
+                      backgroundColor: "white",
                     }}
                   >
                     <Image
@@ -335,7 +336,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 2,
-                      backgroundColor: "red",
+                      backgroundColor: "white",
                       marginTop: "auto",
                     }}
                   >
@@ -353,7 +354,7 @@ export default function App({ navigation }: { navigation: any }) {
                 <View
                   style={{
                     flex: 0.975,
-                    backgroundColor: "blue",
+                    backgroundColor: "white",
                   }}
                 ></View>
                 <TouchableOpacity
@@ -385,7 +386,7 @@ export default function App({ navigation }: { navigation: any }) {
           
           
           */}
-          <View style={{ flex: 10, backgroundColor: "yellow" }}>
+          <View style={{ flex: 10, backgroundColor: "white" }}>
             {/*
             
             
@@ -395,7 +396,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 0.925,
-                  backgroundColor: "magenta",
+                  backgroundColor: "white",
                 }}
               >
                 <Image
@@ -407,24 +408,24 @@ export default function App({ navigation }: { navigation: any }) {
                     marginTop: 25,
                   }}
                 />
-                <Text>
+                <Text style={{ marginLeft: 15, marginRight: 15 }}>
                   {"\n"}
-                  Pour récupérer des icônes paramétrables en intégratio,{"\n"}
-                  front web !{"\n"}
+                  Pour récupérer des icônes paramétrables en {"\n"}
+                  intégration front web !{"\n"}
                   {"\n"}
                   {"\n"}
                 </Text>
                 <View
                   style={{
                     flex: 1,
-                    backgroundColor: "orange",
+                    backgroundColor: "white",
                     flexDirection: "row",
                   }}
                 >
                   <View
                     style={{
                       flex: 1,
-                      backgroundColor: "pink",
+                      backgroundColor: "white",
                     }}
                   >
                     <Image
@@ -440,7 +441,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 2,
-                      backgroundColor: "red",
+                      backgroundColor: "white",
                       marginTop: "auto",
                     }}
                   >
@@ -458,7 +459,7 @@ export default function App({ navigation }: { navigation: any }) {
                 <View
                   style={{
                     flex: 0.975,
-                    backgroundColor: "blue",
+                    backgroundColor: "white",
                   }}
                 ></View>
                 <TouchableOpacity
@@ -489,10 +490,10 @@ export default function App({ navigation }: { navigation: any }) {
           </View>
         </View>
         <View
-          style={{ flex: 12.1, backgroundColor: "green", flexDirection: "row" }}
+          style={{ flex: 12.1, backgroundColor: "white", flexDirection: "row" }}
         >
           <View
-            style={{ flex: 1, backgroundColor: "blue", height: 400 }}
+            style={{ flex: 1, backgroundColor: "white", height: 400 }}
           ></View>
           {/* 
           
@@ -500,12 +501,12 @@ export default function App({ navigation }: { navigation: any }) {
           
           
           */}
-          <View style={{ flex: 9.5, backgroundColor: "magenta" }}>
+          <View style={{ flex: 9.5, backgroundColor: "white" }}>
             <View style={styles.CardRactangle}>
               <View
                 style={{
                   flex: 0.925,
-                  backgroundColor: "magenta",
+                  backgroundColor: "white",
                 }}
               >
                 <Image
@@ -517,24 +518,24 @@ export default function App({ navigation }: { navigation: any }) {
                     marginTop: 25,
                   }}
                 />
-                <Text>
+                <Text style={{ marginLeft: 15, marginRight: 15 }}>
                   {"\n"}
-                  Pour télécharger Les pictos, les fonts, logos, codes{"\n"}
-                  couleurs à La charte graphique{"\n"}
+                  Pour télécharger Les pictos, les fonts, logos,{"\n"}
+                  codes couleurs à La charte graphique{"\n"}
                   BNPP AM{"\n"}
                   {"\n"}
                 </Text>
                 <View
                   style={{
                     flex: 1,
-                    backgroundColor: "orange",
+                    backgroundColor: "white",
                     flexDirection: "row",
                   }}
                 >
                   <View
                     style={{
                       flex: 1,
-                      backgroundColor: "pink",
+                      backgroundColor: "white",
                     }}
                   >
                     <Image
@@ -550,7 +551,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 2,
-                      backgroundColor: "red",
+                      backgroundColor: "white",
                       marginTop: "auto",
                     }}
                   >
@@ -566,7 +567,7 @@ export default function App({ navigation }: { navigation: any }) {
                 <View
                   style={{
                     flex: 0.975,
-                    backgroundColor: "blue",
+                    backgroundColor: "white",
                   }}
                 ></View>
                 <TouchableOpacity
@@ -592,12 +593,12 @@ export default function App({ navigation }: { navigation: any }) {
             </View>
           </View>
           <View style={{ flex: 0.5, backgroundColor: "white" }}></View>
-          <View style={{ flex: 10, backgroundColor: "pink" }}>
+          <View style={{ flex: 10, backgroundColor: "white" }}>
             <View style={styles.CardRactangle}>
               <View
                 style={{
                   flex: 0.925,
-                  backgroundColor: "magenta",
+                  backgroundColor: "white",
                 }}
               >
                 <Image
@@ -609,24 +610,24 @@ export default function App({ navigation }: { navigation: any }) {
                     marginTop: 25,
                   }}
                 />
-                <Text>
+                <Text style={{ marginLeft: 15, marginRight: 15 }}>
                   {"\n"}
-                  Un outil pour construire vos newsletters en quelques{"\n"}
-                  clics, avec des composants clés en main : page html,{"\n"}
-                  mailing... Il n'ajamais été aussi facile de communiquer!{"\n"}
-                  {"\n"}
+                  Un outil pour construire vos newsletters en{"\n"}
+                  quelques clics, avec des composants clés en {"\n"}
+                  main : page html, mailing... Il n'ajamais été {"\n"}
+                  aussi facile de communiquer!{"\n"}
                 </Text>
                 <View
                   style={{
                     flex: 1,
-                    backgroundColor: "orange",
+                    backgroundColor: "white",
                     flexDirection: "row",
                   }}
                 >
                   <View
                     style={{
                       flex: 1,
-                      backgroundColor: "pink",
+                      backgroundColor: "white",
                     }}
                   >
                     <Image
@@ -642,7 +643,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 2,
-                      backgroundColor: "red",
+                      backgroundColor: "white",
                       marginTop: "auto",
                     }}
                   >
@@ -658,7 +659,7 @@ export default function App({ navigation }: { navigation: any }) {
                 <View
                   style={{
                     flex: 0.975,
-                    backgroundColor: "blue",
+                    backgroundColor: "white",
                   }}
                 ></View>
                 <TouchableOpacity
@@ -692,7 +693,7 @@ export default function App({ navigation }: { navigation: any }) {
           
           
           */}
-          <View style={{ flex: 10.5, backgroundColor: "violet" }}>
+          <View style={{ flex: 10.5, backgroundColor: "white" }}>
             <View style={styles.CardRactangleNone}>
               <View
                 style={{
@@ -783,7 +784,7 @@ export default function App({ navigation }: { navigation: any }) {
             <Image
               source={test}
               style={{
-                width: "80%",
+                width: "90%",
                 height: "100%",
               }}
             />
