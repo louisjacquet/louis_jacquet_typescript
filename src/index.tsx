@@ -115,14 +115,10 @@ export default function App({ navigation }: { navigation: any }) {
           <View style={{ flex: 1.5, backgroundColor: "white" }}>
             <TouchableOpacity
               style={styles.button2}
+              onPress={() => navigation.navigate("Plug")}
               //onPress={() => handleOpenWithLinking()}
             >
-              <Text
-                style={styles.text3}
-                onPress={() => navigation.navigate("Plug")}
-              >
-                PLUG & PlAY
-              </Text>
+              <Text style={styles.text3}>PLUG & PlAY</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -277,7 +273,9 @@ export default function App({ navigation }: { navigation: any }) {
                         backgroundColor: "transparent",
                       }}
                     ></View>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={() => navigation.navigate("Plug")}
+                    >
                       <View style={styles.button11}>
                         <Text style={styles.text3}>Découvrir</Text>
                       </View>

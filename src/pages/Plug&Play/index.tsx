@@ -229,7 +229,7 @@ export default function App({ navigation }: { navigation: any }) {
                         width: "100%",
                         height: "35%",
                         //left: "30%",
-                        marginTop: 21,
+                        marginTop: 28,
                       }}
                     />
                   </View>
@@ -328,7 +328,7 @@ export default function App({ navigation }: { navigation: any }) {
                         width: "100%",
                         height: "35%",
                         //left: "30%",
-                        marginTop: 21,
+                        marginTop: 28,
                       }}
                     />
                   </View>
@@ -433,7 +433,7 @@ export default function App({ navigation }: { navigation: any }) {
                         width: "100%",
                         height: "35%",
                         //left: "30%",
-                        marginTop: 21,
+                        marginTop: 28,
                       }}
                     />
                   </View>
@@ -543,7 +543,7 @@ export default function App({ navigation }: { navigation: any }) {
                         width: "100%",
                         height: "35%",
                         //left: "30%",
-                        marginTop: 21,
+                        marginTop: 28,
                       }}
                     />
                   </View>
@@ -635,7 +635,7 @@ export default function App({ navigation }: { navigation: any }) {
                         width: "100%",
                         height: "35%",
                         //left: "30%",
-                        marginTop: 21,
+                        marginTop: 28,
                       }}
                     />
                   </View>
@@ -843,10 +843,12 @@ export default function App({ navigation }: { navigation: any }) {
             }}
           />
         </View>
-        {/**/}
+        {/*            <Text style={[styles.texte401, , { lineHeight: 50 }]}> </Text>
+         */}
+        <Text style={{ fontSize: 8 }}>{"\n"}</Text>
         <View
           style={{
-            flex: 0.2,
+            flex: 1.4,
             flexDirection: "row",
           }}
         >
@@ -865,7 +867,7 @@ export default function App({ navigation }: { navigation: any }) {
             style={{
               fontSize: 14,
               fontWeight: 500,
-
+              marginTop: 5,
               textAlign: "center",
             }}
           >
