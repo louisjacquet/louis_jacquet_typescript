@@ -63,6 +63,15 @@ export const styles = StyleSheet.create({
     padding: 15,
     width: 135,
   },
+  button5: {
+    backgroundColor: "#26AA90",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    height: 40,
+    padding: 15,
+    width: 135,
+  },
   button11: {
     backgroundColor: "#26AA90",
     justifyContent: "center",
@@ -91,6 +100,10 @@ export const styles = StyleSheet.create({
     top: 5,
     left: 210,
   },
+  textdiv: {
+    fontSize: 12,
+    fontWeight: 800, //Semibold
+  },
   italique: {
     color: "#424242",
     top: 275,
@@ -112,6 +125,21 @@ export const styles = StyleSheet.create({
     left: 80,
     fontSize: 15,
     fontWeight: 400,
+  },
+  textfin: {
+    fontSize: 20,
+    fontWeight: 600,
+    textAlign: "center",
+  },
+  textfin2: {
+    fontSize: 14,
+    fontWeight: 700,
+    textAlign: "center",
+  },
+  textfin3: {
+    fontSize: 12,
+    fontWeight: 400,
+    textAlign: "center",
   },
   texte201: {
     color: "#424242",
@@ -173,6 +201,27 @@ export const styles = StyleSheet.create({
     marginRight: "5%",
     backgroundColor: "#FFFFFF",
   },
+  CardRactangle2: {
+    marginBottom: 5,
+    marginTop: 5,
+    shadowColor: "#000000",
+    shadowOpacity: 0.15,
+    shadowRadius: 10,
+    width: "85%",
+    height: "95%",
+    marginLeft: "5%",
+    marginRight: "10%",
+    backgroundColor: "#FFFFFF",
+  },
+  CardRactangleNone: {
+    marginBottom: 5,
+    marginTop: 5,
+    width: "85%",
+    height: "95%",
+    marginLeft: "5%",
+    marginRight: "10%",
+    backgroundColor: "#FFFFFF",
+  },
   roundButton1: {
     width: 30,
     height: 30,
@@ -182,6 +231,17 @@ export const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: "#61C3D7",
     borderColor: "#E3EFF2",
+    borderWidth: 5,
+  },
+  roundButton2: {
+    width: 30,
+    height: 30,
+    textAlign: "center",
+    justifyContent: "flex-end",
+    padding: 15,
+    borderRadius: 100,
+    backgroundColor: "#26AA90",
+    borderColor: "#E4F5EE",
     borderWidth: 5,
   },
 });
