@@ -23,6 +23,7 @@
     "expo-linking": "^3.1.0",
     "expo-status-bar": "~1.3.0",
     "react": "17.0.2",
+    "react-color": "^2.19.3",
     "react-dom": "17.0.2",
     "react-native": "0.68.1",
     "react-native-elements": "^3.4.2",
@@ -37,8 +38,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@types/": "react-navigation/native",
     "@types/react": "~17.0.21",
+    "@types/react-navigation/native": "^6.0.10",
     "@types/react-native": "^0.66.18",
     "typescript": "~4.3.5"
   },

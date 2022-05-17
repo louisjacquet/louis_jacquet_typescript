@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Image,
   StyleSheet,
@@ -12,6 +12,7 @@ import {
   ImageBackground,
 } from "react-native";
 import { styles } from "./style";
+import { PhotoshopPicker } from "react-color";
 import { LinearGradient } from "expo-linear-gradient";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import blanc from "../../../assets/blanc.png";
@@ -38,6 +39,7 @@ import { Video, AVPlaybackStatus } from "expo-av";
 
 export default function App({ navigation }: { navigation: any }) {
   const Stack = createNativeStackNavigator();
+  const [color, setColor] = useState("#ff0000");
   const video = React.useRef(null);
   const video2 = React.useRef(null);
   const [status, setStatus] = React.useState({});
@@ -410,7 +412,7 @@ export default function App({ navigation }: { navigation: any }) {
                         marginTop: "10%",
                       }}
                     >
-                      Sliders, accordeons, boutons
+                      Slider, accordeon, bouton
                     </Text>
                   </View>
                 </View>
@@ -426,9 +428,37 @@ export default function App({ navigation }: { navigation: any }) {
             </View>
           </LinearGradient>
         </View>
-        <View style={{ flex: 15, backgroundColor: "yellow" }}>
-          <Text>BNPP CARDIF Colors Palettes RVB</Text>
-          <Text>Selectionner et copier</Text>
+        <View style={{ flex: 10, backgroundColor: "yellow" }}>
+          <Text
+            style={{
+              fontSize: 20,
+              marginLeft: "7%",
+              fontWeight: "600",
+              marginTop: "1%",
+              color: "#26AA90",
+            }}
+          >
+            BNPP CARDIF Colors Palettes RVB
+          </Text>
+          <Text
+            style={{
+              fontSize: 16,
+              marginLeft: "7%",
+              fontWeight: "600",
+            }}
+          >
+            Selectionner et copier
+          </Text>
+        </View>
+        <View style={{ flex: 5, backgroundColor: "snow" }}>
+          <PhotoshopPicker
+            color={color}
+            onChangeComplete={(color: {
+              hex: React.SetStateAction<string>;
+            }) => {
+              setColor(color.hex);
+            }}
+          />
         </View>
       </ScrollView>
     </View>
