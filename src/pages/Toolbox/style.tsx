@@ -38,6 +38,11 @@ export const styles = StyleSheet.create({
     color: "white",
     fontStyle: "italic",
   },
+  texteti: {
+    fontSize: 16,
+    marginLeft: "7%",
+    fontWeight: "600",
+  },
   text2: {
     fontSize: 14,
     fontWeight: "600", //Semibold

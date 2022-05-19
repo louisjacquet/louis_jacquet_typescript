@@ -25,6 +25,12 @@ import basics from "../../../assets/Basics.png";
 export default function App({ navigation }: { navigation: any }) {
   const Stack = createNativeStackNavigator();
   const [couleur, setCouleur] = useState("");
+  var [state, setState] = useState({
+    v1Visible: false,
+    v2Visible: false,
+    v3Visible: true,
+    v4Visible: false,
+  });
   async function cop() {
     await navigator.clipboard.writeText(couleur);
     alert("Couleur copiée");
@@ -35,6 +41,14 @@ export default function App({ navigation }: { navigation: any }) {
       cop();
     }
   }, [couleur]);
+
+  state = {
+    v1Visible: false,
+    v2Visible: false,
+    v3Visible: false,
+    v4Visible: true,
+  };
+
   return (
     <View
       style={[
@@ -153,14 +167,14 @@ export default function App({ navigation }: { navigation: any }) {
                 flex: 1,
               }}
             >
-              <Text>Trying</Text>
+              <Text>{"\n"}</Text>
               <View
                 style={{
                   flex: 0.5,
                   backgroundColor: "red",
                 }}
               >
-                <Text>Trying0</Text>
+                <Text>{"\n"}</Text>
               </View>
 
               <View
@@ -169,7 +183,7 @@ export default function App({ navigation }: { navigation: any }) {
                   backgroundColor: "violet",
                 }}
               >
-                <Text>Trying2</Text>
+                <Text>{"\n"}</Text>
 
                 <View style={styles.CardRactangle}>
                   <View
@@ -210,7 +224,7 @@ export default function App({ navigation }: { navigation: any }) {
                   backgroundColor: "green",
                 }}
               >
-                <Text>Trying2</Text>
+                <Text>{"\n"}</Text>
 
                 <View style={styles.CardRactangle}>
                   <View
@@ -251,7 +265,7 @@ export default function App({ navigation }: { navigation: any }) {
                   backgroundColor: "violet",
                 }}
               >
-                <Text>Trying2</Text>
+                <Text>{"\n"}</Text>
                 <View style={styles.CardRactangle}>
                   <View
                     style={{
@@ -291,7 +305,7 @@ export default function App({ navigation }: { navigation: any }) {
                   backgroundColor: "green",
                 }}
               >
-                <Text>Trying2</Text>
+                <Text>{"\n"}</Text>
                 <View style={styles.CardRactangle2}>
                   <View
                     style={{
@@ -331,7 +345,7 @@ export default function App({ navigation }: { navigation: any }) {
                   backgroundColor: "violet",
                 }}
               >
-                <Text>Trying2</Text>
+                <Text>{"\n"}</Text>
                 <View style={styles.CardRactangle2}>
                   <View
                     style={{
@@ -371,7 +385,7 @@ export default function App({ navigation }: { navigation: any }) {
                   backgroundColor: "blue",
                 }}
               >
-                <Text>Trying2</Text>
+                <Text>{"\n"}</Text>
                 <View style={styles.CardRactangle2}>
                   <View
                     style={{
@@ -411,7 +425,7 @@ export default function App({ navigation }: { navigation: any }) {
                   backgroundColor: "red",
                 }}
               >
-                <Text>Trying</Text>
+                <Text>{"\n"}</Text>
               </View>
             </View>
           </LinearGradient>
@@ -428,15 +442,7 @@ export default function App({ navigation }: { navigation: any }) {
           >
             BNPP CARDIF Colors Palettes RVB
           </Text>
-          <Text
-            style={{
-              fontSize: 16,
-              marginLeft: "7%",
-              fontWeight: "600",
-            }}
-          >
-            Selectionner et copier
-          </Text>
+          <Text style={styles.texteti}>Selectionner et copier</Text>
         </View>
         <View
           style={{ flex: 10, backgroundColor: "snow", flexDirection: "row" }}
@@ -614,7 +620,7 @@ export default function App({ navigation }: { navigation: any }) {
 
 
 
-*/}
+            */}
           <View style={{ flex: 5, backgroundColor: "magenta" }}>
             <View
               style={{
@@ -1036,12 +1042,42 @@ export default function App({ navigation }: { navigation: any }) {
           </View>
           <View style={{ flex: 3, backgroundColor: "black" }}></View>
         </View>
+        <View style={{}}>
+          <Text style={styles.texteti}>Heading, paragraphe, lien</Text>
+          <TouchableOpacity
+            onPress={(state) =>
+              setState({
+                v1Visible: false,
+                v2Visible: true,
+                v3Visible: false,
+                v4Visible: false,
+              })
+            }
+          >
+            <Text>Here</Text>
+          </TouchableOpacity>
+          {state.v1Visible && (
+            <View>
+              <Text>View 1</Text>
+            </View>
+          )}
+          {state.v2Visible && (
+            <View>
+              <Text>View 2</Text>
+            </View>
+          )}
+          {state.v3Visible && (
+            <View>
+              <Text>View 3</Text>
+            </View>
+          )}
+          {state.v4Visible && (
+            <View>
+              <Text>View 4</Text>
+            </View>
+          )}
+        </View>
       </ScrollView>
     </View>
   );
 }
-/*
- <input type="text" value={couleur} onChange={inputHandler} />
-
-          <button onClick={copy}>Copy To Clipboard</button>
-          */
