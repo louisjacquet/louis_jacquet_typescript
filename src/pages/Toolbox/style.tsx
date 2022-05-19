@@ -27,6 +27,17 @@ export const styles = StyleSheet.create({
     fontWeight: "300",
     left: 190,
   },
+  textcol: {
+    fontSize: 12,
+    marginLeft: "75%",
+    fontWeight: "300",
+    textAlign: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    marginTop: "2%",
+    color: "white",
+    fontStyle: "italic",
+  },
   text2: {
     fontSize: 14,
     fontWeight: "600", //Semibold
