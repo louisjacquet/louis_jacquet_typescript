@@ -31,6 +31,7 @@ export default function App({ navigation }: { navigation: any }) {
     "v3Visible",
     "v4Visible",
   ]);
+
   const [selected, setSelected] = useState("");
   async function cop() {
     await navigator.clipboard.writeText(couleur);
@@ -1039,7 +1040,7 @@ export default function App({ navigation }: { navigation: any }) {
         <View style={{}}>
           <Text style={styles.texteti}>Heading, paragraphe, lien</Text>
           {state.map((i) => (
-            <TouchableOpacity onPress={(i) => setSelected(i)}>
+            <TouchableOpacity onPress={() => setSelected(i)}>
               <Text>{i} Here</Text>
             </TouchableOpacity>
           ))}
