@@ -25,12 +25,13 @@ import basics from "../../../assets/Basics.png";
 export default function App({ navigation }: { navigation: any }) {
   const Stack = createNativeStackNavigator();
   const [couleur, setCouleur] = useState("");
-  var [state, setState] = useState({
-    v1Visible: false,
-    v2Visible: false,
-    v3Visible: true,
-    v4Visible: false,
-  });
+  var [state, setState] = useState([
+    "v1Visible",
+    "v2Visible",
+    "v3Visible",
+    "v4Visible",
+  ]);
+  const [selected, setSelected] = useState("");
   async function cop() {
     await navigator.clipboard.writeText(couleur);
     alert("Couleur copiée");
@@ -41,13 +42,6 @@ export default function App({ navigation }: { navigation: any }) {
       cop();
     }
   }, [couleur]);
-
-  state = {
-    v1Visible: false,
-    v2Visible: false,
-    v3Visible: false,
-    v4Visible: true,
-  };
 
   return (
     <View
@@ -1044,34 +1038,27 @@ export default function App({ navigation }: { navigation: any }) {
         </View>
         <View style={{}}>
           <Text style={styles.texteti}>Heading, paragraphe, lien</Text>
-          <TouchableOpacity
-            onPress={(state) =>
-              setState({
-                v1Visible: false,
-                v2Visible: true,
-                v3Visible: false,
-                v4Visible: false,
-              })
-            }
-          >
-            <Text>Here</Text>
-          </TouchableOpacity>
-          {state.v1Visible && (
+          {state.map((i) => (
+            <TouchableOpacity onPress={(i) => setSelected(i)}>
+              <Text>{i} Here</Text>
+            </TouchableOpacity>
+          ))}
+          {selected == "v1Visible" && (
             <View>
               <Text>View 1</Text>
             </View>
           )}
-          {state.v2Visible && (
+          {selected == "v2Visible" && (
             <View>
               <Text>View 2</Text>
             </View>
           )}
-          {state.v3Visible && (
+          {selected == "v3Visible" && (
             <View>
               <Text>View 3</Text>
             </View>
           )}
-          {state.v4Visible && (
+          {selected == "v4Visible" && (
             <View>
               <Text>View 4</Text>
             </View>
