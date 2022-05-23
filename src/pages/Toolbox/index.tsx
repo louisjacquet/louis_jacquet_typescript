@@ -21,6 +21,8 @@ import navigations from "../../../assets/Navigation.png";
 import formulaire from "../../../assets/Formulaire.png";
 import blocs from "../../../assets/Blocs.png";
 import basics from "../../../assets/Basics.png";
+import line_green from "../../../assets/green_color.png";
+import blanc from "../../../assets/blanc.png";
 
 export default function App({ navigation }: { navigation: any }) {
   const Stack = createNativeStackNavigator();
@@ -142,8 +144,8 @@ export default function App({ navigation }: { navigation: any }) {
 
         <View
           style={{
-            flex: 10.4,
-            backgroundColor: "green",
+            flex: 20,
+            backgroundColor: "white",
           }}
         >
           <LinearGradient
@@ -155,7 +157,7 @@ export default function App({ navigation }: { navigation: any }) {
             <Text style={styles.textg}>TOOLBOX</Text>
             <View
               style={{
-                backgroundColor: "red",
+                backgroundColor: "white",
                 flexDirection: "row",
                 flex: 1,
               }}
@@ -164,7 +166,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 0.5,
-                  backgroundColor: "red",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -173,7 +175,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 4,
-                  backgroundColor: "violet",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -182,7 +184,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 0.925,
-                      backgroundColor: "yellow",
+                      backgroundColor: "white",
                       justifyContent: "flex-start",
                       alignItems: "center",
                       borderWidth: 2,
@@ -214,7 +216,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 4,
-                  backgroundColor: "green",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -223,7 +225,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 0.925,
-                      backgroundColor: "yellow",
+                      backgroundColor: "white",
                       justifyContent: "flex-start",
                       alignItems: "center",
                       borderWidth: 2,
@@ -255,7 +257,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 4,
-                  backgroundColor: "violet",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -263,7 +265,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 0.925,
-                      backgroundColor: "yellow",
+                      backgroundColor: "white",
                       justifyContent: "flex-start",
                       alignItems: "center",
                       borderWidth: 2,
@@ -295,7 +297,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 4,
-                  backgroundColor: "green",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -303,7 +305,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 0.925,
-                      backgroundColor: "yellow",
+                      backgroundColor: "white",
                       justifyContent: "flex-start",
                       alignItems: "center",
                       borderWidth: 2,
@@ -335,7 +337,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 4,
-                  backgroundColor: "violet",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -343,7 +345,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 0.925,
-                      backgroundColor: "yellow",
+                      backgroundColor: "white",
                       justifyContent: "flex-start",
                       alignItems: "center",
                       borderWidth: 2,
@@ -375,7 +377,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 4,
-                  backgroundColor: "blue",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -383,7 +385,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <View
                     style={{
                       flex: 0.925,
-                      backgroundColor: "yellow",
+                      backgroundColor: "white",
                       justifyContent: "flex-start",
                       alignItems: "center",
                       borderWidth: 2,
@@ -415,7 +417,7 @@ export default function App({ navigation }: { navigation: any }) {
               <View
                 style={{
                   flex: 1.5,
-                  backgroundColor: "red",
+                  backgroundColor: "white",
                 }}
               >
                 <Text>{"\n"}</Text>
@@ -423,7 +425,7 @@ export default function App({ navigation }: { navigation: any }) {
             </View>
           </LinearGradient>
         </View>
-        <View style={{ flex: 5, backgroundColor: "yellow" }}>
+        <View style={{ flex: 10, backgroundColor: "white" }}>
           <Text
             style={{
               fontSize: 20,
@@ -438,10 +440,14 @@ export default function App({ navigation }: { navigation: any }) {
           <Text style={styles.texteti}>Selectionner et copier</Text>
         </View>
         <View
-          style={{ flex: 10, backgroundColor: "snow", flexDirection: "row" }}
+          style={{
+            flex: 25,
+            backgroundColor: "white",
+            flexDirection: "row",
+          }}
         >
-          <View style={{ flex: 3, backgroundColor: "black" }}> </View>
-          <View style={{ flex: 5, backgroundColor: "blue" }}>
+          <View style={{ flex: 3, backgroundColor: "white" }}> </View>
+          <View style={{ flex: 5, backgroundColor: "white" }}>
             <View
               style={{
                 justifyContent: "center",
@@ -614,7 +620,7 @@ export default function App({ navigation }: { navigation: any }) {
 
 
             */}
-          <View style={{ flex: 5, backgroundColor: "magenta" }}>
+          <View style={{ flex: 5, backgroundColor: "white" }}>
             <View
               style={{
                 justifyContent: "center",
@@ -769,7 +775,7 @@ export default function App({ navigation }: { navigation: any }) {
           
           
           */}
-          <View style={{ flex: 5, backgroundColor: "green" }}>
+          <View style={{ flex: 5, backgroundColor: "white" }}>
             <View
               style={{
                 justifyContent: "center",
@@ -925,7 +931,7 @@ export default function App({ navigation }: { navigation: any }) {
           
           
           */}
-          <View style={{ flex: 5, backgroundColor: "red" }}>
+          <View style={{ flex: 5, backgroundColor: "white" }}>
             <View
               style={{
                 justifyContent: "center",
@@ -1033,10 +1039,11 @@ export default function App({ navigation }: { navigation: any }) {
               {/* 6 */}
             </View>
           </View>
-          <View style={{ flex: 3, backgroundColor: "black" }}></View>
+          <View style={{ flex: 3, backgroundColor: "white" }}></View>
         </View>
-        <Text style={styles.texteti}>Heading, paragraphe, lien</Text>
-        <View style={{ flexDirection: "row", marginLeft: "6%" }}>
+        <View style={{ height: 100 }}></View>
+        <Text style={styles.texteti}>Heading, paragraphe, lien {"\n"} </Text>
+        <View style={{ flexDirection: "row", marginLeft: "6%", flex: 10 }}>
           {state.map((i) => (
             <TouchableOpacity
               onPress={() => setSelected(i)}
@@ -1112,6 +1119,51 @@ export default function App({ navigation }: { navigation: any }) {
               </View>
             </View>
           )}
+        </View>
+        <View
+          style={{
+            flex: 0.1,
+            flexDirection: "column",
+          }}
+        >
+          <Image
+            source={line_green}
+            style={{
+              width: "100%",
+              height: 5,
+            }}
+          />
+        </View>
+        {/*            <Text style={[styles.texte401, , { lineHeight: 50 }]}> </Text>
+         */}
+        <Text style={{ fontSize: 8 }}>{"\n"}</Text>
+        <View
+          style={{
+            flex: 1.4,
+            flexDirection: "row",
+          }}
+        >
+          <Image source={logo} style={{ width: 143, height: 30 }} />
+          <Image source={blanc} style={{ width: 5, height: 5 }} />
+          <Text
+            style={{
+              fontSize: 20,
+              fontWeight: "200",
+              marginRight: 20,
+            }}
+          >
+            |
+          </Text>
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: "500",
+              marginTop: 5,
+              textAlign: "center",
+            }}
+          >
+            La banque d'un monde qui change
+          </Text>
         </View>
       </ScrollView>
     </View>
