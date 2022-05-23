@@ -111,7 +111,12 @@ export default function App({ navigation }: { navigation: any }) {
           <View style={{ flex: 0.2, backgroundColor: "white" }}></View>
           <View style={{ flex: 1.5, backgroundColor: "white" }}>
             <TouchableOpacity style={styles.button}>
-              <Text style={styles.text3}>A LA CARTE</Text>
+              <Text
+                style={styles.text3}
+                onPress={() => navigation.navigate("Carte")}
+              >
+                A LA CARTE
+              </Text>
             </TouchableOpacity>
           </View>
           <View style={{ flex: 1.5, backgroundColor: "white" }}>
@@ -358,7 +363,12 @@ export default function App({ navigation }: { navigation: any }) {
             </Text>
             <TouchableOpacity>
               <View style={styles.button3}>
-                <Text style={styles.text3}>L'équipe</Text>
+                <Text
+                  style={styles.text3}
+                  onPress={() => navigation.navigate("Equipe")}
+                >
+                  L'équipe
+                </Text>
               </View>
             </TouchableOpacity>
           </View>

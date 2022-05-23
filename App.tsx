@@ -1,10 +1,9 @@
 import Index from "./src";
 import Plug from "./src/pages/Plug&Play";
 import Tool from "./src/pages/Toolbox";
-import {
-  createAppContainer,
-  createStackNavigator,
-} from "react-navigation/native";
+import Carte from "./src/pages/Carte";
+import Equipe from "./src/pages/Equipe";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -22,6 +21,8 @@ export default function App() {
         <Stack.Screen name="Index" component={Index} />
         <Stack.Screen name="Plug" component={Plug} />
         <Stack.Screen name="Tool" component={Tool} />
+        <Stack.Screen name="Carte" component={Carte} />
+        <Stack.Screen name="Equipe" component={Equipe} />
       </Stack.Navigator>
     </NavigationContainer>
   );
