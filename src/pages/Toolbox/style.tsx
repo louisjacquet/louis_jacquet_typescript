@@ -101,6 +101,16 @@ export const styles = StyleSheet.create({
     padding: 15,
     width: 120,
   },
+  buttonArrow: {
+    backgroundColor: "#26AA90",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    height: 20,
+    padding: 12,
+    width: 80,
+    marginLeft: "1%",
+  },
 
   roundButton1: {
     width: 30,
@@ -112,5 +122,16 @@ export const styles = StyleSheet.create({
     backgroundColor: "#61C3D7",
     borderColor: "#E3EFF2",
     borderWidth: 5,
+  },
+  marginText: {
+    flexDirection: "column",
+    marginTop: 35,
+    marginLeft: "-30%",
+  },
+  marginCont: {
+    //keep this background color
+    backgroundColor: "snow",
+    width: 1100,
+    height: 150,
   },
 });

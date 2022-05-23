@@ -25,14 +25,12 @@ import basics from "../../../assets/Basics.png";
 export default function App({ navigation }: { navigation: any }) {
   const Stack = createNativeStackNavigator();
   const [couleur, setCouleur] = useState("");
-  var [state, setState] = useState([
-    "v1Visible",
-    "v2Visible",
-    "v3Visible",
-    "v4Visible",
-  ]);
+  var [state, setState] = useState(["PREVIEW", "HTML", "CSS", "JAVASCRIPT"]);
 
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState("PREVIEW");
+  var [state2, setState2] = useState(["PREVIEW", "HTML", "CSS", "JAVASCRIPT"]);
+
+  const [selected2, setSelected2] = useState("PREVIEW");
   async function cop() {
     await navigator.clipboard.writeText(couleur);
     alert("Couleur copiée");
@@ -1037,31 +1035,81 @@ export default function App({ navigation }: { navigation: any }) {
           </View>
           <View style={{ flex: 3, backgroundColor: "black" }}></View>
         </View>
-        <View style={{}}>
-          <Text style={styles.texteti}>Heading, paragraphe, lien</Text>
+        <Text style={styles.texteti}>Heading, paragraphe, lien</Text>
+        <View style={{ flexDirection: "row", marginLeft: "6%" }}>
           {state.map((i) => (
-            <TouchableOpacity onPress={() => setSelected(i)}>
-              <Text>{i} Here</Text>
+            <TouchableOpacity
+              onPress={() => setSelected(i)}
+              style={styles.buttonArrow}
+            >
+              <Text>{i}</Text>
             </TouchableOpacity>
           ))}
-          {selected == "v1Visible" && (
-            <View>
-              <Text>View 1</Text>
+          {selected == "PREVIEW" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code of this preview</Text>
+              </View>
             </View>
           )}
-          {selected == "v2Visible" && (
-            <View>
-              <Text>View 2</Text>
+          {selected == "HTML" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code in HTML</Text>
+              </View>
             </View>
           )}
-          {selected == "v3Visible" && (
-            <View>
-              <Text>View 3</Text>
+          {selected == "CSS" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code in CSS</Text>
+              </View>
             </View>
           )}
-          {selected == "v4Visible" && (
-            <View>
-              <Text>View 4</Text>
+          {selected == "JAVASCRIPT" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code in JAVASCRIPT</Text>
+              </View>
+            </View>
+          )}
+        </View>
+        <Text style={styles.texteti}>Box simple title</Text>
+        <View style={{ flexDirection: "row", marginLeft: "6%" }}>
+          {state.map((i) => (
+            <TouchableOpacity
+              onPress={() => setSelected2(i)}
+              style={styles.buttonArrow}
+            >
+              <Text>{i}</Text>
+            </TouchableOpacity>
+          ))}
+          {selected2 == "PREVIEW" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code of this preview</Text>
+              </View>
+            </View>
+          )}
+          {selected2 == "HTML" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code in HTML</Text>
+              </View>
+            </View>
+          )}
+          {selected2 == "CSS" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code in CSS</Text>
+              </View>
+            </View>
+          )}
+          {selected2 == "JAVASCRIPT" && (
+            <View style={styles.marginText}>
+              <View style={styles.marginCont}>
+                <Text>The code in JAVASCRIPT</Text>
+              </View>
             </View>
           )}
         </View>
