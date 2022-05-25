@@ -74,7 +74,12 @@ export default function App({ navigation }: { navigation: any }) {
               justifyContent: "center",
             }}
           >
-            <Text style={styles.text2}>UXTeam</Text>
+            <Text
+              style={styles.text2}
+              onPress={() => navigation.navigate("Equipe")}
+            >
+              UXTeam
+            </Text>
           </View>
           <View
             style={{
@@ -90,7 +95,12 @@ export default function App({ navigation }: { navigation: any }) {
               justifyContent: "center",
             }}
           >
-            <Text style={styles.text2}>Projets</Text>
+            <Text
+              style={styles.text2}
+              onPress={() => navigation.navigate("Projets")}
+            >
+              Projets
+            </Text>
           </View>
           <View
             style={{
@@ -106,8 +116,14 @@ export default function App({ navigation }: { navigation: any }) {
               justifyContent: "center",
             }}
           >
-            <Text style={styles.text2}>Glossaire</Text>
+            <Text
+              style={styles.text2}
+              onPress={() => navigation.navigate("Glossaire")}
+            >
+              Glossaire
+            </Text>
           </View>
+
           <View style={{ flex: 0.2, backgroundColor: "white" }}></View>
           <View style={{ flex: 1.5, backgroundColor: "white" }}>
             <TouchableOpacity style={styles.button}>
@@ -129,6 +145,7 @@ export default function App({ navigation }: { navigation: any }) {
             </TouchableOpacity>
           </View>
         </View>
+
         <View style={{ flex: 0.3, backgroundColor: "white" }}></View>
         <View style={{ flex: 1.5, backgroundColor: "white" }}>
           <View
