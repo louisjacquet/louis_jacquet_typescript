@@ -12,24 +12,15 @@ import {
   ImageBackground,
 } from "react-native";
 import { styles } from "./style";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import blanc from "../../../assets/blanc.png";
 import img_back3 from "../../../assets/img_back_3.png";
 import line_green from "../../../assets/green_color.png";
 import logo from "../../../assets/BNP_Paribas_Cardif.png";
-import servicesux from "../../../assets/ServicesUx.png";
-
-import { Video, AVPlaybackStatus } from "expo-av";
+import screen from "../../../assets/Screen.png";
+import screen2 from "../../../assets/Screen2.png";
+import test from "../../../assets/Test.png";
 
 export default function App({ navigation }: { navigation: any }) {
-  const Stack = createNativeStackNavigator();
-  const video = React.useRef(null);
-  const video2 = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const buttonClickedHandler = () => {
-    console.log("You have been clicked a button!");
-    // do something
-  };
   return (
     <View
       style={[
@@ -141,58 +132,7 @@ export default function App({ navigation }: { navigation: any }) {
             </TouchableOpacity>
           </View>
         </View>
-
-        <View style={{ flex: 25, backgroundColor: "white" }}>
-          <Image
-            source={servicesux}
-            style={{
-              width: 1050,
-              height: 500,
-              marginLeft: 80,
-              marginTop: 50,
-            }}
-          />
-        </View>
-        <View
-          style={[
-            styles.backgroundContainer,
-            {
-              flexDirection: "row",
-            },
-          ]}
-        >
-          <View
-            style={{
-              flex: 0.75,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Image
-              source={img_back3}
-              style={{
-                width: 500,
-                height: 200,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              flex: 0.75,
-              backgroundColor: "transparent",
-              flexDirection: "column",
-            }}
-          >
-            <Text style={[styles.texte401, , { lineHeight: 50 }]}> </Text>
-            <Text style={[styles.texte401, , { lineHeight: 70 }]}>
-              Une question, un projet ?
-            </Text>
-            <Text style={styles.texte402}>
-              Contactez notre équipe pour un accompagnement personnalisé:
-            </Text>
-            <Text style={styles.texte403}>AM.UXTEAMS@BNPPARIBAS.COM</Text>
-          </View>
-        </View>
+        <View style={{ flex: 1, backgroundColor: "red" }}></View>
         <View
           style={{
             flex: 0.1,

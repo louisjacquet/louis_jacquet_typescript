@@ -13,25 +13,22 @@ import {
   TouchableHighlight,
 } from "react-native";
 import { styles } from "./style";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import blanc from "../../../assets/blanc.png";
 import img_back3 from "../../../assets/img_back_3.png";
 import line_green from "../../../assets/green_color.png";
 import logo from "../../../assets/BNP_Paribas_Cardif.png";
 import algue from "../../../assets/Algue.png";
 import face1 from "../../../assets/Face1.png";
-
-import { Video, AVPlaybackStatus } from "expo-av";
+import face2 from "../../../assets/Face2.png";
+import face3 from "../../../assets/Face3.png";
+import face4 from "../../../assets/Face4.png";
+import face5 from "../../../assets/Face5.png";
+import face6 from "../../../assets/Face6.png";
+import face7 from "../../../assets/Face7.png";
+import face8 from "../../../assets/Face8.png";
+import face9 from "../../../assets/Face9.png";
 
 export default function App({ navigation }: { navigation: any }) {
-  const Stack = createNativeStackNavigator();
-  const video = React.useRef(null);
-  const video2 = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const buttonClickedHandler = () => {
-    console.log("You have been clicked a button!");
-    // do something
-  };
   return (
     <View
       style={[
@@ -72,7 +69,12 @@ export default function App({ navigation }: { navigation: any }) {
               justifyContent: "center",
             }}
           >
-            <Text style={styles.text2}>UXTeam</Text>
+            <Text
+              style={styles.text2}
+              onPress={() => navigation.navigate("Equipe")}
+            >
+              UXTeam
+            </Text>
           </View>
           <View
             style={{
@@ -88,7 +90,12 @@ export default function App({ navigation }: { navigation: any }) {
               justifyContent: "center",
             }}
           >
-            <Text style={styles.text2}>Projets</Text>
+            <Text
+              style={styles.text2}
+              onPress={() => navigation.navigate("Projets")}
+            >
+              Projets
+            </Text>
           </View>
           <View
             style={{
@@ -104,7 +111,12 @@ export default function App({ navigation }: { navigation: any }) {
               justifyContent: "center",
             }}
           >
-            <Text style={styles.text2}>Glossaire</Text>
+            <Text
+              style={styles.text2}
+              onPress={() => navigation.navigate("Glossaire")}
+            >
+              Glossaire
+            </Text>
           </View>
           <View style={{ flex: 0.2, backgroundColor: "white" }}></View>
           <View style={{ flex: 1.5, backgroundColor: "white" }}>
@@ -129,11 +141,13 @@ export default function App({ navigation }: { navigation: any }) {
           </View>
         </View>
 
-        <View style={{ flex: 5, backgroundColor: "white" }}>
+        <View
+          style={{ flex: 5, backgroundColor: "white", flexDirection: "row" }}
+        >
           <View
             style={{
-              flex: 0.75,
-              backgroundColor: "transparent",
+              flex: 1,
+              backgroundColor: "white",
               flexDirection: "column",
               marginLeft: "7%",
             }}
@@ -153,23 +167,29 @@ export default function App({ navigation }: { navigation: any }) {
               L'équipe peut intervenir sur des nouveaux projets, mais aussi sur
               des{"\n"}
               applications existantes pour construire des services digitaux
-              centrés autour{"\n"}
-              de l'utiLisateur.
-              {"\n"}
+              centrés autour{"\n"} de l'utilisateur final.
             </Text>
           </View>
 
           <Image
             source={algue}
             style={{
-              width: 500,
-              height: 250,
-              marginLeft: "52%",
-              marginBottom: "40%",
+              width: 550,
+              height: 275,
+              marginTop: 10,
+              //marginLeft: "52%",
+              //marginBottom: "40%",
             }}
           />
         </View>
-        <View style={{ flex: 15, backgroundColor: "white" }}>
+        <View
+          style={{
+            flex: 5,
+            backgroundColor: "white",
+            marginTop: -120,
+            marginBottom: 250,
+          }}
+        >
           <Text
             style={{
               fontSize: 24,
@@ -206,6 +226,224 @@ export default function App({ navigation }: { navigation: any }) {
           >
             UX/UI Designer
           </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "47%", marginTop: -150 }]}
+          >
+            <Image source={face2} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "-2.5%",
+              marginTop: 5,
+            }}
+          >
+            Charlotte Gascoin
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "-2.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            UX Lead
+          </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "67%", marginTop: -150 }]}
+          >
+            <Image source={face3} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "-42.5%",
+              marginTop: 5,
+            }}
+          >
+            Amine El ouarzadi
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "-42.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            Front-end Developper
+          </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "27%", marginTop: "5%" }]}
+          >
+            <Image source={face4} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "37.5%",
+              marginTop: 5,
+            }}
+          >
+            Eva Anani
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "37.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            UI/UX Designer
+          </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "47%", marginTop: -150 }]}
+          >
+            <Image source={face5} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "-2.5%",
+              marginTop: 5,
+            }}
+          >
+            Nicolas Lebert
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "-2.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            Front-end Developper
+          </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "67%", marginTop: -150 }]}
+          >
+            <Image source={face6} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "-42.5%",
+              marginTop: 5,
+            }}
+          >
+            Arnaud Duthoit
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "-42.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            MOA
+          </Text>
+          <Text
+            style={{
+              fontSize: 24,
+              fontWeight: "600",
+              textAlign: "center",
+              marginTop: 25,
+            }}
+          >
+            Sponsorisée par :
+          </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "27%", marginTop: "5%" }]}
+          >
+            <Image source={face7} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "37.5%",
+              marginTop: 5,
+            }}
+          >
+            Anne Choksang
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "37.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            Head of innovation
+          </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "47%", marginTop: -150 }]}
+          >
+            <Image source={face8} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "-2.5%",
+              marginTop: 5,
+            }}
+          >
+            Emmanuel Le Porto
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "-2.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            Head of Dat, Digital & Architecture IT departement
+          </Text>
+          <TouchableHighlight
+            style={[styles.imagePhoto, { marginLeft: "67%", marginTop: -150 }]}
+          >
+            <Image source={face9} style={styles.imagePhoto} />
+          </TouchableHighlight>
+          <Text
+            style={{
+              fontSize: 16,
+              textAlign: "center",
+              marginRight: "-42.5%",
+              marginTop: 5,
+            }}
+          >
+            Stanislas Jacquet
+          </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              textAlign: "center",
+              marginRight: "-42.5%",
+              marginTop: 5,
+              color: "green",
+            }}
+          >
+            Head of Ddigital Transversal Factory
+          </Text>
         </View>
 
         <View
@@ -213,6 +451,7 @@ export default function App({ navigation }: { navigation: any }) {
             styles.backgroundContainer,
             {
               flexDirection: "row",
+              backgroundColor: "white",
             },
           ]}
         >
@@ -252,6 +491,7 @@ export default function App({ navigation }: { navigation: any }) {
           style={{
             flex: 0.1,
             flexDirection: "column",
+            backgroundColor: "white",
           }}
         >
           <Image
@@ -267,8 +507,9 @@ export default function App({ navigation }: { navigation: any }) {
         <Text style={{ fontSize: 8 }}>{"\n"}</Text>
         <View
           style={{
-            flex: 1.4,
+            flex: 0.35,
             flexDirection: "row",
+            backgroundColor: "white",
           }}
         >
           <Image source={logo} style={{ width: 143, height: 30 }} />
