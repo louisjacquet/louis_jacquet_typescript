@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Image,
+  FlatList,
   StyleSheet,
   Button,
   View,
@@ -132,7 +133,138 @@ export default function App({ navigation }: { navigation: any }) {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{ flex: 1, backgroundColor: "red" }}></View>
+        {/*
+
+
+
+
+
+
+
+
+
+
+
+            */}
+        <View style={{ flex: 15, backgroundColor: "red" }}>
+          <Text style={[styles.texte201, { marginTop: 50, marginLeft: 80 }]}>
+            Glossaire
+          </Text>
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: "snow",
+              flexDirection: "row",
+              shadowColor: "#000000",
+              shadowOpacity: 0.2,
+              shadowRadius: 10,
+              marginLeft: 80,
+              marginRight: 80,
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 30,
+            }}
+          >
+            {letter.map((letter) => {
+              if (letter.data.length >= 1) {
+                return (
+                  <View>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        fontWeight: "600",
+                        marginLeft: 15,
+                        marginRight: 15,
+                      }}
+                    >
+                      {letter.name}
+                    </Text>
+                  </View>
+                );
+              } else {
+                return (
+                  <View>
+                    <Text
+                      style={{
+                        color: "grey",
+                        fontSize: 20,
+                        fontWeight: "600",
+                        marginLeft: 15,
+                        marginRight: 15,
+                      }}
+                    >
+                      {letter.name}
+                    </Text>
+                  </View>
+                );
+              }
+            })}
+          </View>
+          <View style={{ flex: 10, backgroundColor: "green" }}>
+            {letter.map((letter) => {
+              if (letter.data.length >= 1) {
+                return (
+                  <View
+                    style={{
+                      flex: 1,
+                      backgroundColor: "blue",
+                      flexDirection: "row",
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 90,
+                        fontWeight: "200",
+                        marginLeft: 15,
+                        marginRight: 15,
+                      }}
+                    >
+                      {letter.name}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        marginTop: 25,
+                        width: "50%",
+                      }}
+                    >
+                      {letter.data}
+                      {"\n"}
+                    </Text>
+                    <Text style={{ marginTop: 50, width: "50%" }}>
+                      {letter.description}
+                      {"\n"}
+                    </Text>
+                  </View>
+                );
+              }
+            })}
+          </View>
+        </View>
+
+        {/*
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        */}
         <View
           style={{
             flex: 0.1,
@@ -181,4 +313,203 @@ export default function App({ navigation }: { navigation: any }) {
       </ScrollView>
     </View>
   );
+}
+{
+  /*
+    
+    
+
+
+
+
+
+
+
+
+     */
+}
+
+const letter = [
+  {
+    id: "1",
+    name: "A",
+    data: ["Abricot", "Abricot", "Abricot"],
+    description: [
+      "Un abricot est un fruit",
+      "Un abricot est un fruit",
+      "Un abricot est un fruit",
+    ],
+  },
+  {
+    id: "2",
+    name: "B",
+    data: ["Branche", "Branche", "Branche"],
+    description: [
+      "Une branche vient d'un arbre",
+      "Une branche vient d'un arbre",
+      "Une branche vient d'un arbre",
+    ],
+  },
+  {
+    id: "3",
+    name: "C",
+    data: [],
+  },
+  {
+    id: "4",
+    name: "D",
+    data: ["Dalle", "Dalle", "Dalle"],
+    description: [
+      "Une dalle de pierre",
+      "Une dalle de pierre",
+      "Une dalle de pierre",
+    ],
+  },
+  {
+    id: "5",
+    name: "E",
+    data: [],
+  },
+  {
+    id: "6",
+    name: "F",
+    data: [],
+  },
+  {
+    id: "7",
+    name: "G",
+    data: [],
+  },
+  {
+    id: "8",
+    name: "H",
+    data: [],
+  },
+  {
+    id: "9",
+    name: "I",
+    data: [],
+  },
+  {
+    id: "10",
+    name: "J",
+    data: [],
+  },
+
+  {
+    id: "11",
+    name: "K",
+    data: [],
+  },
+  {
+    id: "12",
+    name: "L",
+    data: [],
+  },
+  {
+    id: "13",
+    name: "M",
+    data: [],
+  },
+  {
+    id: "14",
+    name: "N",
+    data: [],
+  },
+  {
+    id: "15",
+    name: "O",
+    data: [],
+  },
+
+  {
+    id: "16",
+    name: "P",
+    data: [],
+  },
+  {
+    id: "17",
+    name: "Q",
+    data: [],
+  },
+  {
+    id: "18",
+    name: "R",
+    data: [],
+  },
+  {
+    id: "19",
+    name: "S",
+    data: [],
+  },
+  {
+    id: "20",
+    name: "T",
+    data: [],
+  },
+
+  {
+    id: "21",
+    name: "U",
+    data: [],
+  },
+  {
+    id: "22",
+    name: "V",
+    data: [],
+  },
+  {
+    id: "23",
+    name: "W",
+    data: [],
+  },
+  {
+    id: "24",
+    name: "X",
+    data: [],
+  },
+  {
+    id: "25",
+    name: "Y",
+    data: [],
+  },
+  {
+    id: "26",
+    name: "Z",
+    data: [],
+  },
+];
+{
+  /*
+
+
+
+
+
+
+
+
+
+*/
+}
+{
+  /*
+const word = [
+  {
+    id: "1",
+    letter: "A",
+    name: "Abricot",
+  },
+  {
+    id: "2",
+    letter: "B",
+    name: "Branche",
+  },
+  {
+    id: "3",
+    letter: "D",
+    name: "Dalle",
+  },
+];
+*/
 }

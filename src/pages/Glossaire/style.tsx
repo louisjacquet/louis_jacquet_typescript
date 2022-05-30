@@ -143,8 +143,7 @@ export const styles = StyleSheet.create({
   },
   texte201: {
     color: "#424242",
-    top: 900,
-    right: 380,
+
     fontSize: 25,
     fontWeight: "600",
   },
