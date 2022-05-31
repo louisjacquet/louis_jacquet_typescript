@@ -200,45 +200,60 @@ export default function App({ navigation }: { navigation: any }) {
               }
             })}
           </View>
+
+          {/*
+          
+
+
+          */}
           <View style={{ flex: 10, backgroundColor: "green" }}>
             {letter.map((letter) => {
-              if (letter.data.length >= 1) {
-                return (
-                  <View
+              const isleetergotdata = letter.data?.length > 0;
+              if (!isleetergotdata) {
+                return null;
+              }
+              return (
+                <View
+                  style={{
+                    flex: 1,
+                    backgroundColor: "blue",
+                    flexDirection: "row",
+                    marginLeft: 135,
+                  }}
+                >
+                  <Text
                     style={{
-                      flex: 1,
-                      backgroundColor: "blue",
-                      flexDirection: "row",
+                      fontSize: 90,
+                      fontWeight: "200",
+                      marginLeft: 15,
+                      marginRight: 15,
                     }}
                   >
-                    <Text
-                      style={{
-                        fontSize: 90,
-                        fontWeight: "200",
-                        marginLeft: 15,
-                        marginRight: 15,
-                      }}
-                    >
-                      {letter.name}
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        fontWeight: "600",
-                        marginTop: 25,
-                        width: "50%",
-                      }}
-                    >
-                      {letter.data}
-                      {"\n"}
-                    </Text>
-                    <Text style={{ marginTop: 50, width: "50%" }}>
-                      {letter.description}
-                      {"\n"}
-                    </Text>
-                  </View>
-                );
-              }
+                    {letter.name}
+                  </Text>
+                  {letter.data?.map((item, index) => {
+                    return (
+                      <>
+                        <Text
+                          style={{
+                            fontSize: 18,
+                            fontWeight: "600",
+                            marginTop: 25,
+                            width: "50%",
+                          }}
+                        >
+                          {letter.data[index]}
+                          {"\n"}
+                        </Text>
+                        <Text style={{ marginTop: 50, width: "50%" }}>
+                          {letter.description[index]}
+                          {"\n"}
+                        </Text>
+                      </>
+                    );
+                  })}
+                </View>
+              );
             })}
           </View>
         </View>
@@ -354,6 +369,7 @@ const letter = [
     id: "3",
     name: "C",
     data: [],
+    description: [],
   },
   {
     id: "4",
@@ -369,114 +385,136 @@ const letter = [
     id: "5",
     name: "E",
     data: [],
+    description: [],
   },
   {
     id: "6",
     name: "F",
     data: [],
+    description: [],
   },
   {
     id: "7",
     name: "G",
     data: [],
+    description: [],
   },
   {
     id: "8",
     name: "H",
     data: [],
+    description: [],
   },
   {
     id: "9",
     name: "I",
     data: [],
+    description: [],
   },
   {
     id: "10",
     name: "J",
     data: [],
+    description: [],
   },
 
   {
     id: "11",
     name: "K",
     data: [],
+    description: [],
   },
   {
     id: "12",
     name: "L",
     data: [],
+    description: [],
   },
   {
     id: "13",
     name: "M",
     data: [],
+    description: [],
   },
   {
     id: "14",
     name: "N",
     data: [],
+    description: [],
   },
   {
     id: "15",
     name: "O",
     data: [],
+    description: [],
   },
 
   {
     id: "16",
     name: "P",
     data: [],
+    description: [],
   },
   {
     id: "17",
     name: "Q",
     data: [],
+    description: [],
   },
   {
     id: "18",
     name: "R",
     data: [],
+    description: [],
   },
   {
     id: "19",
     name: "S",
     data: [],
+    description: [],
   },
   {
     id: "20",
     name: "T",
     data: [],
+    description: [],
   },
 
   {
     id: "21",
     name: "U",
     data: [],
+    description: [],
   },
   {
     id: "22",
     name: "V",
     data: [],
+    description: [],
   },
   {
     id: "23",
     name: "W",
     data: [],
+    description: [],
   },
   {
     id: "24",
     name: "X",
     data: [],
+    description: [],
   },
   {
     id: "25",
     name: "Y",
     data: [],
+    description: [],
   },
   {
     id: "26",
     name: "Z",
     data: [],
+    description: [],
   },
 ];
 {
@@ -492,24 +530,10 @@ const letter = [
 
 */
 }
-{
-  /*
-const word = [
+const item = [
   {
     id: "1",
-    letter: "A",
     name: "Abricot",
-  },
-  {
-    id: "2",
-    letter: "B",
-    name: "Branche",
-  },
-  {
-    id: "3",
-    letter: "D",
-    name: "Dalle",
+    description: "Un abricot est un fruit",
   },
 ];
-*/
-}
