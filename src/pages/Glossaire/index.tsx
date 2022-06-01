@@ -227,13 +227,14 @@ export default function App({ navigation }: { navigation: any }) {
                       fontWeight: "200",
                       marginLeft: 15,
                       marginRight: 15,
+                      marginBottom: 100,
                     }}
                   >
                     {letter.name}
                   </Text>
                   {letter.data?.map((item, index) => {
                     return (
-                      <>
+                      <View style={{ width: "40%", marginLeft: 70 }}>
                         <Text
                           style={{
                             fontSize: 18,
@@ -249,7 +250,7 @@ export default function App({ navigation }: { navigation: any }) {
                           {letter.description[index]}
                           {"\n"}
                         </Text>
-                      </>
+                      </View>
                     );
                   })}
                 </View>
