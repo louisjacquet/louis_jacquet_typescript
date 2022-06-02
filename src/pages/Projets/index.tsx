@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Image,
   StyleSheet,
@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   ScrollView,
   ImageBackground,
+  Modal,
 } from "react-native";
 import { styles } from "./style";
 import blanc from "../../../assets/blanc.png";
@@ -20,7 +21,8 @@ import screen from "../../../assets/Screen.png";
 import screen2 from "../../../assets/Screen2.png";
 import test from "../../../assets/Test.png";
 
-export default function App({ navigation }: { navigation: any }) {
+export default function App(this: any, { navigation }: { navigation: any }) {
+  const [show, setShow] = useState(false);
   return (
     <View
       style={[
@@ -317,23 +319,29 @@ export default function App({ navigation }: { navigation: any }) {
               }}
             />
           </View>
+
           <View
             style={{
               flex: 7.5,
-              //alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <Image
-              source={screen2}
-              style={{
-                width: "80%",
-                height: "80%",
-                marginBottom: 150,
-                marginTop: 120,
-                marginLeft: "-10%",
-              }}
-            />
+            {show && <text>My text headers</text>}
+            <div
+              onMouseEnter={() => setShow(true)}
+              onMouseLeave={() => setShow(false)}
+            >
+              <Image
+                source={screen2}
+                style={{
+                  width: "80%",
+                  height: "80%",
+                  marginBottom: 255,
+                  marginTop: 15,
+                  marginLeft: "-10%",
+                }}
+              />
+            </div>
           </View>
         </View>
         <View
