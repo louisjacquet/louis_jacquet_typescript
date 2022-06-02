@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Image,
   FlatList,
@@ -22,6 +22,8 @@ import screen2 from "../../../assets/Screen2.png";
 import test from "../../../assets/Test.png";
 
 export default function App({ navigation }: { navigation: any }) {
+  const fieldRef = React.useRef<HTMLInputElement>(null);
+  const scrollToElement = () => fieldRef.current?.scrollIntoView();
   return (
     <View
       style={[
@@ -176,6 +178,7 @@ export default function App({ navigation }: { navigation: any }) {
                         marginLeft: 15,
                         marginRight: 15,
                       }}
+                      onPress={scrollToElement}
                     >
                       {letter.name}
                     </Text>
@@ -209,6 +212,16 @@ export default function App({ navigation }: { navigation: any }) {
           <View style={{ flex: 10, backgroundColor: "green" }}>
             {letter.map((letter) => {
               const isleetergotdata = letter.data?.length > 0;
+              {
+                /*True or False*/
+              }
+              const length = letter.data?.length;
+              const length2 = length % 2;
+              const nbrlignes = 1 + (length + length2) / 2;
+              {
+                /*On cherche a travers les 3 constantes précédentes
+             à faire en sorte que 2 éléments soient sur chaque ligne */
+              }
               if (!isleetergotdata) {
                 return null;
               }
@@ -221,18 +234,27 @@ export default function App({ navigation }: { navigation: any }) {
                     marginLeft: 135,
                   }}
                 >
-                  <Text
+                  <div
+                    ref={fieldRef}
                     style={{
-                      fontSize: 90,
-                      fontWeight: "200",
-                      marginLeft: 15,
-                      marginRight: 15,
                       marginBottom: 100,
                     }}
                   >
-                    {letter.name}
-                  </Text>
+                    <Text
+                      style={{
+                        fontSize: 90,
+                        fontWeight: "200",
+                        marginLeft: 15,
+                        marginRight: 15,
+                        marginBottom: 80,
+                      }}
+                    >
+                      {letter.name}
+                    </Text>
+                  </div>
+
                   {letter.data?.map((item, index) => {
+                    //for (let io; i <= nbrlignes; i++) {}
                     return (
                       <View style={{ width: "40%", marginLeft: 70 }}>
                         <Text

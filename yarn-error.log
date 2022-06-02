@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add expo-clipboard@~3.0.1
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-scroll-into-view
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\louis\OneDrive\one drive\Documents\flutter\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\ProgramData\chocolatey\bin;C:\Users\louis\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\OpenJDK\openjdk-11.0.14.1_1\bin;C:\Users\louis\AppData\Local\Microsoft\WindowsApps;C:\Users\louis\.dotnet\tools;C:\Users\louis\AppData\Local\Programs\Microsoft VS Code\bin;"C:\Users\louis\AppData\Local\Programs\Python\Python310;C:\Users\louis\AppData\Local\Programs\Python\Python310\Scripts";C:\Users\louis\AppData\Local\Yarn\bin;C:\Users\louis\AppData\Roaming\npm;C:\Users\louis\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\louis\AppData\Local\Android\Sdk\platform-tools;
