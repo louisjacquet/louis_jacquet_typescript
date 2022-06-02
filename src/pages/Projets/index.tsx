@@ -326,18 +326,50 @@ export default function App(this: any, { navigation }: { navigation: any }) {
               justifyContent: "center",
             }}
           >
-            {show && <text>My text headers</text>}
             <div
-              onMouseEnter={() => setShow(true)}
+              onMouseEnter={() => {
+                setShow(true);
+              }}
               onMouseLeave={() => setShow(false)}
             >
+              {show && (
+                <Text
+                  style={{
+                    zIndex: 15,
+                    fontSize: 20,
+                    fontWeight: "600",
+                    color: "black",
+                    position: "absolute",
+                    top: 50,
+                    right: 250,
+                  }}
+                >
+                  SENSE
+                </Text>
+              )}
+              {show && (
+                <Text
+                  style={{
+                    zIndex: 15,
+                    fontSize: 20,
+                    fontWeight: "400",
+                    color: "black",
+                    position: "absolute",
+                    top: 100,
+                    right: 200,
+                    width: 200,
+                  }}
+                >
+                  The small investment research platform
+                </Text>
+              )}
               <Image
                 source={screen2}
                 style={{
                   width: "80%",
                   height: "80%",
-                  marginBottom: 255,
-                  marginTop: 15,
+                  marginBottom: 258,
+                  marginTop: 12,
                   marginLeft: "-10%",
                 }}
               />

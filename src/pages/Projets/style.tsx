@@ -244,4 +244,11 @@ export const styles = StyleSheet.create({
     borderColor: "#E4F5EE",
     borderWidth: 5,
   },
+  imageho: {
+    width: "80%",
+    height: "80%",
+    marginBottom: 150,
+    marginTop: 120,
+    marginLeft: "-10%",
+  },
 });

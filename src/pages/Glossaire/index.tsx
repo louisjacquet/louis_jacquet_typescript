@@ -211,6 +211,10 @@ export default function App({ navigation }: { navigation: any }) {
           */}
           <View style={{ flex: 10, backgroundColor: "green" }}>
             {letter.map((letter) => {
+              let count = 0;
+              let reste = 0;
+              let total = 1;
+              let same = 0;
               const isleetergotdata = letter.data?.length > 0;
               {
                 /*True or False*/
@@ -254,26 +258,55 @@ export default function App({ navigation }: { navigation: any }) {
                   </div>
 
                   {letter.data?.map((item, index) => {
-                    //for (let io; i <= nbrlignes; i++) {}
-                    return (
-                      <View style={{ width: "40%", marginLeft: 70 }}>
-                        <Text
-                          style={{
-                            fontSize: 18,
-                            fontWeight: "600",
-                            marginTop: 25,
-                            width: "50%",
-                          }}
-                        >
-                          {letter.data[index]}
-                          {"\n"}
-                        </Text>
-                        <Text style={{ marginTop: 50, width: "50%" }}>
-                          {letter.description[index]}
-                          {"\n"}
-                        </Text>
-                      </View>
-                    );
+                    if (total !== same) {
+                      return (
+                        <View style={{ width: "40%", marginLeft: 70 }}>
+                          <Text
+                            style={{
+                              fontSize: 18,
+                              fontWeight: "600",
+                              marginTop: 25,
+                              width: "50%",
+                            }}
+                          >
+                            {count++}
+                            {(reste = count % 2)}
+                            {(total = (count + reste) / 2)}
+                            {letter.data[index]}
+                            {"\n"}
+                          </Text>
+                          <Text style={{ marginTop: 50, width: "50%" }}>
+                            {letter.description[index]}
+                            {"\n"}
+                          </Text>
+                        </View>
+                      );
+                    } else {
+                      return (
+                        <View style={{ flexDirection: "column" }}>
+                          <View style={{ width: "40%", marginLeft: 70 }}>
+                            <Text
+                              style={{
+                                fontSize: 18,
+                                fontWeight: "600",
+                                marginTop: 25,
+                                width: "50%",
+                              }}
+                            >
+                              {count++}
+                              {(reste = count % 2)}
+                              {(total = (count + reste) / 2)}
+                              {letter.data[index]}
+                              {"\n"}
+                            </Text>
+                            <Text style={{ marginTop: 50, width: "50%" }}>
+                              {letter.description[index]}
+                              {"\n"}
+                            </Text>
+                          </View>
+                        </View>
+                      );
+                    }
                   })}
                 </View>
               );
