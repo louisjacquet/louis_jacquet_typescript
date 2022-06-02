@@ -214,7 +214,7 @@ export default function App(this: any, { navigation }: { navigation: any }) {
             {
               flexDirection: "row",
               flex: 10,
-              backgroundColor: "green",
+              backgroundColor: "white",
             },
           ]}
         >
@@ -279,7 +279,7 @@ export default function App(this: any, { navigation }: { navigation: any }) {
             {
               flexDirection: "row",
               flex: 10,
-              backgroundColor: "green",
+              backgroundColor: "white",
             },
           ]}
         >
@@ -363,16 +363,32 @@ export default function App(this: any, { navigation }: { navigation: any }) {
                   The small investment research platform
                 </Text>
               )}
-              <Image
-                source={screen2}
-                style={{
-                  width: "80%",
-                  height: "80%",
-                  marginBottom: 258,
-                  marginTop: 12,
-                  marginLeft: "-10%",
-                }}
-              />
+              {!show && (
+                <Image
+                  source={screen2}
+                  style={{
+                    width: "80%",
+                    height: "80%",
+                    marginBottom: 258,
+                    marginTop: 12,
+                    marginLeft: "-10%",
+                    //tintColor: "white",
+                  }}
+                />
+              )}
+              {show && (
+                <Image
+                  source={screen2}
+                  style={{
+                    width: "80%",
+                    height: "80%",
+                    marginBottom: 258,
+                    marginTop: 12,
+                    marginLeft: "-10%",
+                    opacity: 0.2,
+                  }}
+                />
+              )}
             </div>
           </View>
         </View>
