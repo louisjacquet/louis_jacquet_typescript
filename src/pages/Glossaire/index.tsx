@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Image,
   FlatList,
@@ -19,6 +19,7 @@ import logo from "../../../assets/BNP_Paribas_Cardif.png";
 
 export default function App({ navigation }: { navigation: any }) {
   const fieldRef = React.useRef<HTMLInputElement>(null);
+
   const scrollToElement = () => fieldRef.current?.scrollIntoView();
   let pass = 0;
   return (
@@ -256,6 +257,7 @@ s
                       if (pass >= letter.description?.length) {
                         pass = 0;
                       }
+
                       return (
                         <View
                           style={{
@@ -278,9 +280,10 @@ s
                           </Text>
                           <Text style={{ marginTop: 10, width: "50%" }}>
                             {letter.description[pass]}
-                            {pass++}
+
                             {"\n"}
                           </Text>
+                          <Text style={{ fontSize: 0 }}>{pass++}</Text>
                         </View>
                       );
                     }}
@@ -363,6 +366,7 @@ s
     </View>
   );
 }
+
 {
   /*
     
