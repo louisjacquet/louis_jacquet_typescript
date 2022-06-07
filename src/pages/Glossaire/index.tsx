@@ -14,16 +14,13 @@ import {
 } from "react-native";
 import { styles } from "./style";
 import blanc from "../../../assets/blanc.png";
-import img_back3 from "../../../assets/img_back_3.png";
 import line_green from "../../../assets/green_color.png";
 import logo from "../../../assets/BNP_Paribas_Cardif.png";
-import screen from "../../../assets/Screen.png";
-import screen2 from "../../../assets/Screen2.png";
-import test from "../../../assets/Test.png";
 
 export default function App({ navigation }: { navigation: any }) {
   const fieldRef = React.useRef<HTMLInputElement>(null);
   const scrollToElement = () => fieldRef.current?.scrollIntoView();
+  let pass = 0;
   return (
     <View
       style={[
@@ -148,23 +145,24 @@ export default function App({ navigation }: { navigation: any }) {
 
 
             */}
-        <View style={{ flex: 15, backgroundColor: "red" }}>
+        <View style={{ flex: 15, backgroundColor: "white" }}>
           <Text style={[styles.texte201, { marginTop: 50, marginLeft: 80 }]}>
             Glossaire
           </Text>
           <View
             style={{
-              flex: 1,
+              flex: 0.7,
               backgroundColor: "snow",
               flexDirection: "row",
               shadowColor: "#000000",
-              shadowOpacity: 0.2,
+              shadowOpacity: 0.3,
               shadowRadius: 10,
               marginLeft: 80,
               marginRight: 80,
               justifyContent: "center",
               alignItems: "center",
               marginTop: 30,
+              marginBottom: 30,
             }}
           >
             {letter.map((letter) => {
@@ -207,21 +205,14 @@ export default function App({ navigation }: { navigation: any }) {
           {/*
           
 
-
+s
           */}
-          <View style={{ flex: 10, backgroundColor: "green" }}>
+          <View style={{ flex: 10, backgroundColor: "white" }}>
             {letter.map((letter) => {
-              let count = 0;
-              let reste = 0;
-              let total = 1;
-              let same = 0;
               const isleetergotdata = letter.data?.length > 0;
               {
                 /*True or False*/
               }
-              const length = letter.data?.length;
-              const length2 = length % 2;
-              const nbrlignes = 1 + (length + length2) / 2;
               {
                 /*On cherche a travers les 3 constantes précédentes
              à faire en sorte que 2 éléments soient sur chaque ligne */
@@ -233,7 +224,7 @@ export default function App({ navigation }: { navigation: any }) {
                 <View
                   style={{
                     flex: 1,
-                    backgroundColor: "blue",
+                    backgroundColor: "white",
                     flexDirection: "row",
                     marginLeft: 135,
                   }}
@@ -241,7 +232,7 @@ export default function App({ navigation }: { navigation: any }) {
                   <div
                     ref={fieldRef}
                     style={{
-                      marginBottom: 100,
+                      marginBottom: 300,
                     }}
                   >
                     <Text
@@ -257,62 +248,49 @@ export default function App({ navigation }: { navigation: any }) {
                     </Text>
                   </div>
 
-                  {letter.data?.map((item, index) => {
-                    if (total !== same) {
+                  <FlatList
+                    data={letter.description}
+                    numColumns={2}
+                    keyExtractor={(_, index) => index.toString()}
+                    renderItem={({ item }) => {
+                      if (pass >= letter.description?.length) {
+                        pass = 0;
+                      }
                       return (
-                        <View style={{ width: "40%", marginLeft: 70 }}>
+                        <View
+                          style={{
+                            width: "40%",
+                            marginLeft: 70,
+                            marginTop: 40,
+                          }}
+                        >
                           <Text
                             style={{
                               fontSize: 18,
                               fontWeight: "600",
                               marginTop: 25,
                               width: "50%",
+                              color: "#007B8A",
                             }}
                           >
-                            {count++}
-                            {(reste = count % 2)}
-                            {(total = (count + reste) / 2)}
-                            {letter.data[index]}
+                            {letter.data[pass]}
                             {"\n"}
                           </Text>
-                          <Text style={{ marginTop: 50, width: "50%" }}>
-                            {letter.description[index]}
+                          <Text style={{ marginTop: 10, width: "50%" }}>
+                            {letter.description[pass]}
+                            {pass++}
                             {"\n"}
                           </Text>
                         </View>
                       );
-                    } else {
-                      return (
-                        <View style={{ flexDirection: "column" }}>
-                          <View style={{ width: "40%", marginLeft: 70 }}>
-                            <Text
-                              style={{
-                                fontSize: 18,
-                                fontWeight: "600",
-                                marginTop: 25,
-                                width: "50%",
-                              }}
-                            >
-                              {count++}
-                              {(reste = count % 2)}
-                              {(total = (count + reste) / 2)}
-                              {letter.data[index]}
-                              {"\n"}
-                            </Text>
-                            <Text style={{ marginTop: 50, width: "50%" }}>
-                              {letter.description[index]}
-                              {"\n"}
-                            </Text>
-                          </View>
-                        </View>
-                      );
-                    }
-                  })}
+                    }}
+                  />
                 </View>
               );
             })}
           </View>
         </View>
+        {/* */}
 
         {/*
         
@@ -355,7 +333,7 @@ export default function App({ navigation }: { navigation: any }) {
         <Text style={{ fontSize: 8 }}>{"\n"}</Text>
         <View
           style={{
-            flex: 1.4,
+            flex: 0.45,
             flexDirection: "row",
           }}
         >
@@ -404,11 +382,13 @@ const letter = [
   {
     id: "1",
     name: "A",
-    data: ["Abricot", "Abricot", "Abricot"],
+    data: ["Abricot", "Abricot", "Abricot", "Artichaud", "Artichaud"],
     description: [
       "Un abricot est un fruit",
       "Un abricot est un fruit",
       "Un abricot est un fruit",
+      "Un artichaud est un légume",
+      "Un artichaud est un légume",
     ],
   },
   {
